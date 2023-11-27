@@ -1,11 +1,11 @@
-name: haskell-template
+name: servant-docs-blaze
 version: 0.0.0.0
-synopsis: A opinionated template for Haskell projects
+synopsis: Generate HTML documentation for Servant APIs
 description: Please check out the README for more information.
-homepage: https://github.com/Airsequel/haskell-template#readme
+homepage: https://github.com/Airsequel/servant-docs-blaze#readme
 license: AGPL-3.0-or-later
 author: Adrian Sieber
-maintainer: github@ad-si.com
+maintainer: adrian@feram.io
 copyright: Adrian Sieber
 category: Web
 
@@ -32,20 +32,34 @@ ghc-options:
 library:
   language: GHC2021
   source-dirs: source
-
-executables:
-  haskell-template:
-    language: GHC2021
-    source-dirs: app
-    main: Main.hs
-    dependencies:
-      - haskell-template
+  dependencies:
+    - aeson
+    - aeson-pretty
+    - blaze-html
+    - blaze-markup
+    - bytestring
+    - http-media
+    - raw-strings-qq
+    - servant-docs
+    - text
+    - unordered-containers
 
 tests:
-  haskell-template-test:
+  servant-docs-blaze-test:
     language: GHC2021
     source-dirs: tests
     main: Spec.hs
     dependencies:
-      - haskell-template
+      - aeson
+      - aeson-pretty
+      - blaze-html
+      - blaze-markup
+      - bytestring
       - hspec
+      - http-media
+      - raw-strings-qq
+      - servant
+      - servant-docs
+      - servant-docs-blaze
+      - servant-server
+      - text

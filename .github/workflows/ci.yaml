@@ -34,13 +34,4 @@ jobs:
             ${{runner.os}}-stack
 
       - name: Test
-        run: stack test --ghc-options="-O2"
-
-      - name: Copy binary to ~/.local/bin so it can be uploaded
-        run: stack install
-
-      - name: Upload ${{ runner.os }} Release
-        uses: actions/upload-artifact@v3
-        with:
-          path: ~/.local/bin/haskell-template
-          name: haskell-template_${{ runner.os }}_${{ runner.arch }}
+        run: stack test

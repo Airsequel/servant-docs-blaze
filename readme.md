@@ -1,21 +1,21 @@
-# Haskell Template
+# Servant Docs Blaze
 
-Opinionated template for new Haskell projects.
+Create an HTML documentation page for your Servant API
+via [Servant Docs](https://hackage.haskell.org/package/servant-docs)
+and [Blaze HTML](https://hackage.haskell.org/package/blaze-html).
+
+This repo is necessary, because Servant.Docs only includes a
+[markdown renderer] per default.
+
+![Screenshot](./screenshot.png)
 
 
-## Used Technologies
-
-- [Stack](https://docs.haskellstack.org/en/stable/README/)
-- [Fourmolu](https://fourmolu.github.io)
-- [Haskell Language Server ](https://github.com/haskell/haskell-language-server)
-- [Protolude](https://github.com/protolude/protolude)
+[markdown renderer]:
+  https://hackage.haskell.org/package/servant-docs-0.13/docs/Servant-Docs.html#v:markdown
 
 
-## Usage
-
-1. Clone this repository
-1. Rename the folder to your project name
-1. Replace all occurences of `haskell-template` with your project name
-1. Run `stack test` to build the project and run the tests
-1. Run `stack run` to run the project
-1. Run `stack install` to install the project (make it available in your PATH)
+> [!WARNING]
+> This hasn't been written in a way that it can be used as a library, yet.
+> Any help to make this possible and release it on Hackage is appreciated!
+> Until then, you can copy the code into your project
+> and manually adapt it to your needs.
